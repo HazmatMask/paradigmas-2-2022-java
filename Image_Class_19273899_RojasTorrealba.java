@@ -1,9 +1,13 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Image_Class_19273899_RojasTorrealba {
-    private int width;
-    private int height;
+public abstract class Image_Class_19273899_RojasTorrealba {
+    protected int width;
+    protected int height;
+
+    protected ArrayList<Pixel_19273899_RojasTorrealba> pixeles;
+
 
     public Image_Class_19273899_RojasTorrealba(int width, int height) {
         this.width = width;
@@ -26,20 +30,12 @@ public class Image_Class_19273899_RojasTorrealba {
         this.height = height;
     }
 
-    public void setPixeles(List<? extends Pixel_19273899_RojasTorrealba> pixeles) {
+    public ArrayList<Pixel_19273899_RojasTorrealba> getPixeles() {
+        return pixeles;
+    }
+
+    public void setPixeles(ArrayList<Pixel_19273899_RojasTorrealba> pixeles) {
         this.pixeles = pixeles;
-    }
-
-    public boolean isBitmap() {
-        return pixeles.stream().allMatch(pixel -> pixel instanceof Pixbit_19273899_RojasTorrealba);
-    }
-
-    public boolean isPixmap() {
-        return pixeles.stream().allMatch(pixel -> pixel instanceof Pixrgb_19273899_RojasTorrealba);
-    }
-
-    public boolean isHexmap() {
-        return pixeles.stream().allMatch(pixel -> pixel instanceof Pixhex_19273899_RojasTorrealba);
     }
 
     public void flipH() {
@@ -54,4 +50,17 @@ public class Image_Class_19273899_RojasTorrealba {
         this.pixeles = this.pixeles.stream().filter(pixel -> pixel.getxPos() > x1 && pixel.getxPos() < x2
                 && pixel.getyPos() > y1 && pixel.getyPos() < y2).collect(Collectors.toList());
     }
+
+
+//    public boolean isBitmap() {
+//        return pixeles.stream().allMatch(pixel -> pixel instanceof Pixbit_19273899_RojasTorrealba);
+//    }
+//
+//    public boolean isPixmap() {
+//        return pixeles.stream().allMatch(pixel -> pixel instanceof Pixrgb_19273899_RojasTorrealba);
+//    }
+//
+//    public boolean isHexmap() {
+//        return pixeles.stream().allMatch(pixel -> pixel instanceof Pixhex_19273899_RojasTorrealba);
+//    }
 }

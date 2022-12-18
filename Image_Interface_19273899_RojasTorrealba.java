@@ -11,7 +11,7 @@ public interface Image_Interface_19273899_RojasTorrealba {
 
     public void imgRGBtoHEX();
 
-    // public ? histogram();
+    //public histogram();
 
     public void rotate90();
 
@@ -21,7 +21,7 @@ public interface Image_Interface_19273899_RojasTorrealba {
     public void invertColorBit();
     public void invertColorRGB();
 
-    public String image->string();
+    public String imageToString();
 
     // public ? depthLayers();
 

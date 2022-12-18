@@ -16,7 +16,6 @@ public class Main {
         pixeles.add(new Pixbit_19273899_RojasTorrealba(1,1,0,0));
         pixeles.add(new Pixbit_19273899_RojasTorrealba(2,1,0,1));
 
-        Image_Class_19273899_RojasTorrealba image_Class_19273899_rojasTorrealba = new Image_Class_19273899_RojasTorrealba(3,2,pixeles);
 
         //
 
@@ -34,11 +33,11 @@ public class Main {
 
         if (option == 1){
 
-            image_Class_19273899_rojasTorrealba.flipH();
+            //image_Class_19273899_rojasTorrealba.flipH();
 
         } else if (option == 2) {
 
-            image_Class_19273899_rojasTorrealba.flipV();
+            //image_Class_19273899_rojasTorrealba.flipV();
 
         } else if (option == 3) {
 
@@ -53,19 +52,19 @@ public class Main {
             Integer x2 = obj_x2.nextInt();
             Integer y2 = obj_y2.nextInt();
 
-            image_Class_19273899_rojasTorrealba.crop(x1,y1,x2,y2);
+            //image_Class_19273899_rojasTorrealba.crop(x1,y1,x2,y2);
 
         } else if (option == 4) {
 
-            image_Class_19273899_rojasTorrealba.isBitmap();
+            //image_Class_19273899_rojasTorrealba.isBitmap();
 
         } else if (option == 5) {
 
-            image_Class_19273899_rojasTorrealba.isPixmap();
+            //image_Class_19273899_rojasTorrealba.isPixmap();
 
         }else if (option == 6){
 
-            image_Class_19273899_rojasTorrealba.isHexmap();
+            //image_Class_19273899_rojasTorrealba.isHexmap();
 
         }
     }
