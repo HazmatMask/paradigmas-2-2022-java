@@ -1,13 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 public abstract class Image_Class_19273899_RojasTorrealba {
     protected int width;
     protected int height;
-
-    protected ArrayList<Pixel_19273899_RojasTorrealba> pixeles;
-
 
     public Image_Class_19273899_RojasTorrealba(int width, int height) {
         this.width = width;
@@ -30,26 +23,18 @@ public abstract class Image_Class_19273899_RojasTorrealba {
         this.height = height;
     }
 
-    public ArrayList<Pixel_19273899_RojasTorrealba> getPixeles() {
-        return pixeles;
-    }
-
-    public void setPixeles(ArrayList<Pixel_19273899_RojasTorrealba> pixeles) {
-        this.pixeles = pixeles;
-    }
-
-    public void flipH() {
-        this.pixeles.stream().forEach(pixel -> pixel.setxPos(this.width - 1 - pixel.getxPos()));
-    }
-
-    public void flipV() {
-        this.pixeles.stream().forEach(pixel -> pixel.setyPos(this.height - 1 - pixel.getyPos()));
-    }
-
-    public void crop(int x1, int y1, int x2, int y2) {
-        this.pixeles = this.pixeles.stream().filter(pixel -> pixel.getxPos() > x1 && pixel.getxPos() < x2
-                && pixel.getyPos() > y1 && pixel.getyPos() < y2).collect(Collectors.toList());
-    }
+//    public void flipH() {
+//        this.pixeles.stream().forEach(pixel -> pixel.setxPos(this.width - 1 - pixel.getxPos()));
+//    }
+//
+//    public void flipV() {
+//        this.pixeles.stream().forEach(pixel -> pixel.setyPos(this.height - 1 - pixel.getyPos()));
+//    }
+//
+//    public void crop(int x1, int y1, int x2, int y2) {
+//        this.pixeles = this.pixeles.stream().filter(pixel -> pixel.getxPos() > x1 && pixel.getxPos() < x2
+//                && pixel.getyPos() > y1 && pixel.getyPos() < y2).collect(Collectors.toList());
+//    }
 
 
 //    public boolean isBitmap() {

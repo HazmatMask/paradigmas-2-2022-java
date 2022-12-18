@@ -1,11 +1,16 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
 
         //IMAGEN PREVIAMENTE CREADA
+
+        List<Integer> prueba = Arrays.asList(1,2,3,4,5,6,7,8,9,3,4,5,6,7,3,8,6);
+        System.out.println(prueba.stream().distinct());
 
         List<Pixbit_19273899_RojasTorrealba> pixeles = new ArrayList<>();
 
