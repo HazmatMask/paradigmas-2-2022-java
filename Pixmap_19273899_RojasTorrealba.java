@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class Pixmap_19273899_RojasTorrealba extends Image_Class_19273899_RojasTorrealba implements Image_Interface_19273899_RojasTorrealba{
+public class Pixmap_19273899_RojasTorrealba extends Image_Class_19273899_RojasTorrealba implements MapType_19273899_RojasTorrealba,Compression_19273899_RojasTorrealba,Editable_19273899_RojasTorrealba{
 
     private ArrayList<Pixrgb_19273899_RojasTorrealba> pixeles;
     private ArrayList compressedBit;
