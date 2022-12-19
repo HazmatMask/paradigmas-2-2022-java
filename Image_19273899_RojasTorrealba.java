@@ -121,6 +121,24 @@ public class Image_19273899_RojasTorrealba <P extends Pixel_19273899_RojasTorrea
         return (new Image_19273899_RojasTorrealba(this.width,this.height,pixel_list));
     }
 
+    public void invertColorBit(){
+        if (this.isBitmap()){
+            pixeles.forEach(pixel-> {Integer aux = ((Pixbit_19273899_RojasTorrealba) pixel).getValue();
+                                        if (aux == 0){((Pixbit_19273899_RojasTorrealba) pixel).setValue(1);}
+                                        else{((Pixbit_19273899_RojasTorrealba) pixel).setValue(0);}});
+        }
+    }
+
+    public void invertColorRGB(){
+        if (this.isPixmap()){
+            pixeles.forEach(pixel-> {Integer redAux = ((Pixrgb_19273899_RojasTorrealba) pixel).getRed();
+                Integer greenAux = ((Pixrgb_19273899_RojasTorrealba) pixel).getGreen();
+                Integer blueAux = ((Pixrgb_19273899_RojasTorrealba) pixel).getBlue();
+                ((Pixrgb_19273899_RojasTorrealba) pixel).setRed(255-redAux);
+                ((Pixrgb_19273899_RojasTorrealba) pixel).setGreen(255-greenAux);
+                ((Pixrgb_19273899_RojasTorrealba) pixel).setBlue(255-blueAux);});
+        };}
+
     public String[] imageToString(){
         this.pixeles.sort(Comparator.comparing(P::getxPos));
         this.pixeles.sort(Comparator.comparing(P::getyPos));
