@@ -2,31 +2,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
 
         //IMAGEN PREVIAMENTE CREADA
 
-        List<Integer> prueba = Arrays.asList(1,2,3,4,5,6,7,8,9,3,4,5,6,7,3,8,6);
-        System.out.println(prueba.stream().distinct());
+        ArrayList<Pixbit_19273899_RojasTorrealba> pixeles = new ArrayList<>();
 
-        List<Pixbit_19273899_RojasTorrealba> pixeles = new ArrayList<>();
-
-        pixeles.add(new Pixbit_19273899_RojasTorrealba(0,0,0,0));
-        pixeles.add(new Pixbit_19273899_RojasTorrealba(1,0,0,1));
-        pixeles.add(new Pixbit_19273899_RojasTorrealba(2,0,0,0));
-        pixeles.add(new Pixbit_19273899_RojasTorrealba(0,1,0,1));
-        pixeles.add(new Pixbit_19273899_RojasTorrealba(1,1,0,0));
         pixeles.add(new Pixbit_19273899_RojasTorrealba(2,1,0,1));
+        pixeles.add(new Pixbit_19273899_RojasTorrealba(0,0,0,0));
+        pixeles.add(new Pixbit_19273899_RojasTorrealba(1,1,0,0));
+        pixeles.add(new Pixbit_19273899_RojasTorrealba(2,0,0,0));
+        pixeles.add(new Pixbit_19273899_RojasTorrealba(1,0,0,1));
+        pixeles.add(new Pixbit_19273899_RojasTorrealba(0,1,0,1));
 
+        Image_19273899_RojasTorrealba<Pixbit_19273899_RojasTorrealba> image19273899RojasTorrealba = new Image_19273899_RojasTorrealba<Pixbit_19273899_RojasTorrealba>(3,2,pixeles);
 
-        //
-
-        Pixrgb_19273899_RojasTorrealba test = new Pixrgb_19273899_RojasTorrealba(0,0,10,20,30,4);
-
-        System.out.println();
+        System.out.println("A"+image19273899RojasTorrealba.imageToString()[0]+"B");
 
         Scanner myObj = new Scanner(System.in);
         System.out.println("### Manipulador de imágenes ###\n" +
@@ -38,7 +31,8 @@ public class Main {
                 "5. Verificar si imagen es un Pixmap\n" +
                 "6. Verificar si imagen es un Hexmap\n" + "INTRODUZCA SU OPCIÓN:");
 
-        Integer option = myObj.nextInt();
+        // Integer option = myObj.nextInt();
+        Integer option = 1;
 
         if (option == 1){
 

@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.stream.Collectors;
@@ -100,13 +99,12 @@ public class Image_19273899_RojasTorrealba <P extends Pixel_19273899_RojasTorrea
         this.pixeles.forEach(pixel -> {int xPosaux = pixel.getxPos(); pixel.setxPos(this.height - 1 - pixel.getyPos()); pixel.setyPos(-xPosaux);});
     }
 
-    public String imageToString(){
+    public String[] imageToString(){
         this.pixeles.stream().sorted(Comparator.comparingInt(P::getxPos)).collect(Collectors.toList());
         this.pixeles.stream().sorted(Comparator.comparingInt(P::getyPos)).collect(Collectors.toList());
 
-        String aux = "";
-
-        this.pixeles.forEach(aux.concat(P::getxPos+","+P::getyPos+"; "));
+        final String[] aux = {""};
+        pixeles.forEach(pixel -> aux[0] = aux[0].concat(String.valueOf(pixel.getxPos())+","+String.valueOf(pixel.getyPos())+"; "));
 
         return aux;
     }
