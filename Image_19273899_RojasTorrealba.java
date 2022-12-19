@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.stream.Collectors;
@@ -89,22 +90,47 @@ public class Image_19273899_RojasTorrealba <P extends Pixel_19273899_RojasTorrea
     }
 
     @Override
-    public void crop(int x1, int y1, int x2, int y2) {
-        this.pixeles.stream().filter(pixel -> pixel.getxPos() > x1 && pixel.getxPos() < x2
-                && pixel.getyPos() > y1 && pixel.getyPos() < y2).collect(Collectors.toList());
+    public void crop(Integer x1, Integer y1, Integer x2, Integer y2) {
+        this.pixeles = (ArrayList<P>) this.pixeles.stream().filter(pixel -> pixel.getxPos() > x1-1
+        && pixel.getxPos() < x2+1 && pixel.getyPos() > y1-1 && pixel.getyPos() < y2+1).collect(Collectors.toList());
     }
 
     @Override
     public void rotate90() {
         this.pixeles.forEach(pixel -> {int xPosaux = pixel.getxPos(); pixel.setxPos(this.height - 1 - pixel.getyPos()); pixel.setyPos(-xPosaux);});
+        Integer aux = this.width;
+
+        this.width = this.height;
+        this.height = aux;
+    }
+
+    public Image_19273899_RojasTorrealba<Pixhex_19273899_RojasTorrealba> imgRGBtoHEX(){
+        ArrayList<Pixhex_19273899_RojasTorrealba> pix_in = new ArrayList<>();
+        this.pixeles.forEach(pixel -> pix_in.add(pixel.pixRGBToHEX()));
+        return new Image_19273899_RojasTorrealba<Pixhex_19273899_RojasTorrealba>(this.width,this.height,pix_in);
+    }
+
+    public Image_19273899_RojasTorrealba<P> changePixel(P pixel_in) {
+        ArrayList<P> pixel_list = new ArrayList<>();
+        if (width > pixel_in.getxPos() && height > pixel_in.getyPos() & ((this.isBitmap() && pixel_in instanceof Pixbit_19273899_RojasTorrealba)
+                || (this.isPixmap() && pixel_in instanceof Pixrgb_19273899_RojasTorrealba)
+                || (this.isHexmap() && pixel_in instanceof Pixhex_19273899_RojasTorrealba))) {
+            this.pixeles.stream().forEach(pixel -> {if (pixel.getxPos() == pixel_in.getxPos() && pixel.getyPos() == pixel_in.getyPos()){
+                pixel_list.add(pixel_in);}else{pixel_list.add(pixel);}});
+        };
+        return (new Image_19273899_RojasTorrealba(this.width,this.height,pixel_list));
     }
 
     public String[] imageToString(){
-        this.pixeles.stream().sorted(Comparator.comparingInt(P::getxPos)).collect(Collectors.toList());
-        this.pixeles.stream().sorted(Comparator.comparingInt(P::getyPos)).collect(Collectors.toList());
+        this.pixeles.sort(Comparator.comparing(P::getxPos));
+        this.pixeles.sort(Comparator.comparing(P::getyPos));
 
         final String[] aux = {""};
-        pixeles.forEach(pixel -> aux[0] = aux[0].concat(String.valueOf(pixel.getxPos())+","+String.valueOf(pixel.getyPos())+"; "));
+        this.pixeles.forEach(pixel -> {aux[0] = aux[0].concat(pixel.pixelToString());
+                                        if (pixel.getxPos()+1 == width){
+                                        aux[0] = aux[0].concat("\n");};
+                }
+        );
 
         return aux;
     }

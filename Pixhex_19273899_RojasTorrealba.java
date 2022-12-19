@@ -14,4 +14,8 @@ public class Pixhex_19273899_RojasTorrealba extends Pixel_19273899_RojasTorrealb
     public void setHexValue(String hexValue) {
         this.hexValue = hexValue;
     }
+
+    public String pixelToString(){
+        return getHexValue()+"\t";
+    }
 }
