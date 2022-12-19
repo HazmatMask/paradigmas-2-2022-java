@@ -1,24 +1,23 @@
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.stream.Collectors;
 
-public class Bitmap_19273899_RojasTorrealba extends Image_Class_19273899_RojasTorrealba implements Image_Interface_19273899_RojasTorrealba{
+public class Pixmap_19273899_RojasTorrealba extends Image_Class_19273899_RojasTorrealba implements Image_Interface_19273899_RojasTorrealba{
 
-    private ArrayList<Pixbit_19273899_RojasTorrealba> pixeles;
+    private ArrayList<Pixrgb_19273899_RojasTorrealba> pixeles;
     private ArrayList compressedBit;
 
-    public Bitmap_19273899_RojasTorrealba(int width, int height, ArrayList<Pixbit_19273899_RojasTorrealba> pixeles) {
+    public Pixmap_19273899_RojasTorrealba(int width, int height, ArrayList<Pixrgb_19273899_RojasTorrealba> pixeles) {
         super(width, height);
         this.pixeles = pixeles;
         this.compressedBit = null;
     }
 
 
-    public ArrayList<Pixbit_19273899_RojasTorrealba> getPixeles() {
+    public ArrayList<Pixrgb_19273899_RojasTorrealba> getPixeles() {
         return pixeles;
     }
 
-    public void setPixeles(ArrayList<Pixbit_19273899_RojasTorrealba> pixeles) {
+    public void setPixeles(ArrayList<Pixrgb_19273899_RojasTorrealba> pixeles) {
         this.pixeles = pixeles;
     }
 
@@ -33,12 +32,12 @@ public class Bitmap_19273899_RojasTorrealba extends Image_Class_19273899_RojasTo
 
     @Override
     public boolean isBitmap() {
-        return true;
+        return false;
     }
 
     @Override
     public boolean isPixmap() {
-        return false;
+        return true;
     }
 
     @Override
@@ -88,8 +87,8 @@ public class Bitmap_19273899_RojasTorrealba extends Image_Class_19273899_RojasTo
 
     }
 
-    public void invertColorBit() {
-        this.pixeles.stream().forEach(pixel -> {if (pixel.getValue() == 0) {pixel.setValue(1);} else {pixel.setValue(0);};});
+    public void invertColorRGB() {
+        this.pixeles.stream().forEach(pixel -> {pixel.setRed(255-pixel.getRed()); pixel.setGreen(255-pixel.getGreen()); pixel.setBlue(255-pixel.getBlue());});
     }
 
     @Override
@@ -101,3 +100,4 @@ public class Bitmap_19273899_RojasTorrealba extends Image_Class_19273899_RojasTo
     public void decompress() {
     }
 }
+
