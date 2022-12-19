@@ -2,7 +2,7 @@ public class Pixhex_19273899_RojasTorrealba extends Pixel_19273899_RojasTorrealb
     private String hexValue;
 
 
-    public Pixhex_19273899_RojasTorrealba(int xPos, int yPos, int depth, String hexValue) {
+    public Pixhex_19273899_RojasTorrealba(Integer xPos, Integer yPos, Integer depth, String hexValue) {
         super(xPos, yPos, depth);
         this.hexValue = hexValue;
     }

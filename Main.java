@@ -24,6 +24,10 @@ public class Main {
 
         //
 
+        Pixrgb_19273899_RojasTorrealba test = new Pixrgb_19273899_RojasTorrealba(0,0,10,20,30,4);
+
+        System.out.println();
+
         Scanner myObj = new Scanner(System.in);
         System.out.println("### Manipulador de imágenes ###\n" +
                 "Escoja su opción:\n" +

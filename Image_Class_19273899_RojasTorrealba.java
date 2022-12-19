@@ -1,27 +1,31 @@
-public abstract class Image_Class_19273899_RojasTorrealba {
-    protected int width;
-    protected int height;
-
-    public Image_Class_19273899_RojasTorrealba(int width, int height) {
-        this.width = width;
-        this.height = height;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
+//import java.util.ArrayList;
+//
+//public abstract class Image_Class_19273899_RojasTorrealba {
+//    protected int width;
+//    protected int height;
+//
+//    protected ArrayList<Pixel_19273899_RojasTorrealba> pixeles;
+//
+//    public Image_Class_19273899_RojasTorrealba(int width, int height, ArrayList<Pixel_19273899_RojasTorrealba> ) {
+//        this.width = width;
+//        this.height = height;
+//    }
+//
+//    public int getWidth() {
+//        return width;
+//    }
+//
+//    public void setWidth(int width) {
+//        this.width = width;
+//    }
+//
+//    public int getHeight() {
+//        return height;
+//    }
+//
+//    public void setHeight(int height) {
+//        this.height = height;
+//    }
 
 //    public void flipH() {
 //        this.pixeles.stream().forEach(pixel -> pixel.setxPos(this.width - 1 - pixel.getxPos()));
@@ -48,4 +52,4 @@ public abstract class Image_Class_19273899_RojasTorrealba {
 //    public boolean isHexmap() {
 //        return pixeles.stream().allMatch(pixel -> pixel instanceof Pixhex_19273899_RojasTorrealba);
 //    }
-}
+//}
