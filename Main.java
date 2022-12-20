@@ -4,126 +4,198 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //BITMAP PREVIAMENTE CREADO
+        Integer out = 0;
 
-        ArrayList<Pixbit_19273899_RojasTorrealba> pixeles = new ArrayList<>();
+        while (out == 0) {
+            /**
+             * BITMAP CREADO POR DEFECTO
+             */
 
-        pixeles.add(new Pixbit_19273899_RojasTorrealba(2,1,0,1));
-        pixeles.add(new Pixbit_19273899_RojasTorrealba(0,0,0,0));
-        pixeles.add(new Pixbit_19273899_RojasTorrealba(1,1,0,0));
-        pixeles.add(new Pixbit_19273899_RojasTorrealba(2,0,0,0));
-        pixeles.add(new Pixbit_19273899_RojasTorrealba(1,0,0,1));
-        pixeles.add(new Pixbit_19273899_RojasTorrealba(0,1,0,1));
+            ArrayList<Pixbit_19273899_RojasTorrealba> pixeles = new ArrayList<>();
 
-        Image_19273899_RojasTorrealba<Pixbit_19273899_RojasTorrealba> image19273899RojasTorrealba = new Image_19273899_RojasTorrealba<Pixbit_19273899_RojasTorrealba>(3,2,pixeles);
+            pixeles.add(new Pixbit_19273899_RojasTorrealba(2, 1, 0, 1));
+            pixeles.add(new Pixbit_19273899_RojasTorrealba(0, 0, 0, 0));
+            pixeles.add(new Pixbit_19273899_RojasTorrealba(1, 1, 0, 0));
+            pixeles.add(new Pixbit_19273899_RojasTorrealba(2, 0, 0, 0));
+            pixeles.add(new Pixbit_19273899_RojasTorrealba(1, 0, 0, 1));
+            pixeles.add(new Pixbit_19273899_RojasTorrealba(0, 1, 0, 1));
 
-        System.out.println("BITMAP POR DEFECTO:\n"+image19273899RojasTorrealba.imageToString()[0]);
+            Image_19273899_RojasTorrealba<Pixbit_19273899_RojasTorrealba> image19273899RojasTorrealba = new Image_19273899_RojasTorrealba<Pixbit_19273899_RojasTorrealba>(3, 2, pixeles);
 
-        //PIXMAP PREVIAMENTE CREADO
+            System.out.println("BITMAP POR DEFECTO:\n" + image19273899RojasTorrealba.imageToString()[0]);
 
-        ArrayList<Pixrgb_19273899_RojasTorrealba> pixeles2 = new ArrayList<>();
+            /**
+             * PIXMAP CREADO POR DEFECTO
+             */
 
-        pixeles2.add(new Pixrgb_19273899_RojasTorrealba(2,1,0,10,20,30));
-        pixeles2.add(new Pixrgb_19273899_RojasTorrealba(0,0,0,0,10,20));
-        pixeles2.add(new Pixrgb_19273899_RojasTorrealba(1,1,0,10,20,30));
-        pixeles2.add(new Pixrgb_19273899_RojasTorrealba(2,0,0,0,10,20));
-        pixeles2.add(new Pixrgb_19273899_RojasTorrealba(1,0,0,10,20,30));
-        pixeles2.add(new Pixrgb_19273899_RojasTorrealba(0,1,0,0,10,20));
+            ArrayList<Pixrgb_19273899_RojasTorrealba> pixeles2 = new ArrayList<>();
 
-        Image_19273899_RojasTorrealba<Pixrgb_19273899_RojasTorrealba> image19273899RojasTorrealba2 = new Image_19273899_RojasTorrealba<Pixrgb_19273899_RojasTorrealba>(3,2,pixeles2);
+            pixeles2.add(new Pixrgb_19273899_RojasTorrealba(2, 1, 0, 10, 20, 30));
+            pixeles2.add(new Pixrgb_19273899_RojasTorrealba(0, 0, 0, 0, 10, 20));
+            pixeles2.add(new Pixrgb_19273899_RojasTorrealba(1, 1, 0, 10, 20, 30));
+            pixeles2.add(new Pixrgb_19273899_RojasTorrealba(2, 0, 0, 0, 10, 20));
+            pixeles2.add(new Pixrgb_19273899_RojasTorrealba(1, 0, 0, 10, 20, 30));
+            pixeles2.add(new Pixrgb_19273899_RojasTorrealba(0, 1, 0, 0, 10, 20));
 
-        System.out.println("PIXMAP POR DEFECTO:\n"+image19273899RojasTorrealba2.imageToString()[0]);
+            Image_19273899_RojasTorrealba<Pixrgb_19273899_RojasTorrealba> image19273899RojasTorrealba2 = new Image_19273899_RojasTorrealba<Pixrgb_19273899_RojasTorrealba>(3, 2, pixeles2);
 
-        //HEXMAP PREVIAMENTE CREADO
+            System.out.println("PIXMAP POR DEFECTO:\n" + image19273899RojasTorrealba2.imageToString()[0]);
 
-        ArrayList<Pixhex_19273899_RojasTorrealba> pixeles3 = new ArrayList<>();
+            /**
+             * HEXMAP CREADO POR DEFECTO
+             */
 
-        pixeles3.add(new Pixhex_19273899_RojasTorrealba(2,1,0,"AABBCC"));
-        pixeles3.add(new Pixhex_19273899_RojasTorrealba(0,0,0,"001122"));
-        pixeles3.add(new Pixhex_19273899_RojasTorrealba(1,1,0,"AABBCC"));
-        pixeles3.add(new Pixhex_19273899_RojasTorrealba(2,0,0,"001122"));
-        pixeles3.add(new Pixhex_19273899_RojasTorrealba(1,0,0,"AABBCC"));
-        pixeles3.add(new Pixhex_19273899_RojasTorrealba(0,1,0,"001122"));
+            ArrayList<Pixhex_19273899_RojasTorrealba> pixeles3 = new ArrayList<>();
 
-        Image_19273899_RojasTorrealba<Pixhex_19273899_RojasTorrealba> image19273899RojasTorrealba3 = new Image_19273899_RojasTorrealba<Pixhex_19273899_RojasTorrealba>(3,2,pixeles3);
+            pixeles3.add(new Pixhex_19273899_RojasTorrealba(2, 1, 0, "AABBCC"));
+            pixeles3.add(new Pixhex_19273899_RojasTorrealba(0, 0, 0, "001122"));
+            pixeles3.add(new Pixhex_19273899_RojasTorrealba(1, 1, 0, "AABBCC"));
+            pixeles3.add(new Pixhex_19273899_RojasTorrealba(2, 0, 0, "001122"));
+            pixeles3.add(new Pixhex_19273899_RojasTorrealba(1, 0, 0, "AABBCC"));
+            pixeles3.add(new Pixhex_19273899_RojasTorrealba(0, 1, 0, "001122"));
 
-        System.out.println("HEXMAP POR DEFECTO:\n"+image19273899RojasTorrealba3.imageToString()[0]);
+            Image_19273899_RojasTorrealba<Pixhex_19273899_RojasTorrealba> image19273899RojasTorrealba3 = new Image_19273899_RojasTorrealba<Pixhex_19273899_RojasTorrealba>(3, 2, pixeles3);
 
-        image19273899RojasTorrealba2.imgRGBtoHEX();
+            System.out.println("HEXMAP POR DEFECTO:\n" + image19273899RojasTorrealba3.imageToString()[0]);
 
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("### Editor de imágenes ###\n" +
-                "Escoja su opción:\n" +
-                "1. Voltear imagen horizontalmente.\n" +
-                "2. Voltear imagen verticalmente.\n" +
-                "3. Recortar imagen.\n" +
-                "4. Verificar si imagen es un Bitmap\n" +
-                "5. Verificar si imagen es un Pixmap\n" +
-                "6. Verificar si imagen es un Hexmap\n" +
-                "7. Rotar en sentido antihorario la imagen.\n" +
-                "8. Transformar una imagen desde notacion RGB a Hexadecimal." +
-                "9. Cambiar un pixel por otro ingresado (EL INGRESO DE ESTE SERA REALIZADO AUTOMATICAMENTE\n" +
-                "POR EL PROGRAMA, DESDE UN PIXEL YA CREADO EN MEMORIA).\n" +
-                "10. Invertir valores de un Bitmap.\n" +
-                "11. Invertir colores RGB de un Pixmap.\n" + "INTRODUZCA SU OPCIÓN:");
+            image19273899RojasTorrealba2.imgRGBtoHEX();
 
-        Integer option = myObj.nextInt();
+            Scanner myObj = new Scanner(System.in);
+            System.out.println("### Editor de imágenes ###\n" +
+                    "Escoja su opción:\n" +
+                    "1. Voltear imagen horizontalmente.\n" +
+                    "2. Voltear imagen verticalmente.\n" +
+                    "3. Recortar imagen.\n" +
+                    "4. Verificar si imagen es un Bitmap\n" +
+                    "5. Verificar si imagen es un Pixmap\n" +
+                    "6. Verificar si imagen es un Hexmap\n" +
+                    "7. Rotar en sentido antihorario la imagen.\n" +
+                    "8. Transformar una imagen desde notacion RGB a Hexadecimal.\n" +
+                    "9. Cambiar un pixel por otro ingresado (EL INGRESO DE ESTE SERA REALIZADO AUTOMATICAMENTE\n" +
+                    "POR EL PROGRAMA, DESDE UN PIXEL YA CREADO EN MEMORIA).\n" +
+                    "10. Invertir valores de un Bitmap.\n" +
+                    "11. Invertir colores RGB de un Pixmap.\n" + "INTRODUZCA SU OPCION:");
 
-        //Integer option = 11;
+            Integer option = myObj.nextInt();
 
-        if (option == 1){
+            //Integer option = 11;
 
-            image19273899RojasTorrealba.flipH();
+            if (option == 1) {
 
-        } else if (option == 2) {
+                System.out.println("BITMAP ANTES:\n" + image19273899RojasTorrealba.imageToString()[0]);
+                image19273899RojasTorrealba.flipH();
+                System.out.println("BITMAP DESPUES:\n" + image19273899RojasTorrealba.imageToString()[0]);
 
-            image19273899RojasTorrealba.flipV();
+                System.out.println("PIXMAP ANTES:\n" + image19273899RojasTorrealba2.imageToString()[0]);
+                image19273899RojasTorrealba2.flipH();
+                System.out.println("PIXMAP DESPUES:\n" + image19273899RojasTorrealba2.imageToString()[0]);
 
-        } else if (option == 3) {
+                System.out.println("HEXMAP ANTES:\n" + image19273899RojasTorrealba3.imageToString()[0]);
+                image19273899RojasTorrealba3.flipH();
+                System.out.println("HEXMAP DESPUES:\n" + image19273899RojasTorrealba3.imageToString()[0]);
 
-            Scanner obj_x1 = new Scanner(System.in);
-            Scanner obj_y1 = new Scanner(System.in);
-            Scanner obj_x2 = new Scanner(System.in);
-            Scanner obj_y2 = new Scanner(System.in);
-            System.out.println("ingrese 4 valores (x1, y1, x2 e y2), correspondientes a los dos puntos más alejados entre sí, dentro de la selección que se desea recortar.\n");
+            } else if (option == 2) {
 
-            Integer x1 = obj_x1.nextInt();
-            Integer y1 = obj_y1.nextInt();
-            Integer x2 = obj_x2.nextInt();
-            Integer y2 = obj_y2.nextInt();
+                System.out.println("BITMAP ANTES:\n" + image19273899RojasTorrealba.imageToString()[0]);
+                image19273899RojasTorrealba.flipV();
+                System.out.println("BITMAP DESPUES:\n" + image19273899RojasTorrealba.imageToString()[0]);
 
-            image19273899RojasTorrealba.crop(x1,y1,x2,y2);}
+                System.out.println("PIXMAP ANTES:\n" + image19273899RojasTorrealba2.imageToString()[0]);
+                image19273899RojasTorrealba2.flipV();
+                System.out.println("PIXMAP DESPUES:\n" + image19273899RojasTorrealba2.imageToString()[0]);
 
-        else if (option == 4) System.out.println(image19273899RojasTorrealba.isBitmap());
+                System.out.println("HEXMAP ANTES:\n" + image19273899RojasTorrealba3.imageToString()[0]);
+                image19273899RojasTorrealba3.flipV();
+                System.out.println("HEXMAP DESPUES:\n" + image19273899RojasTorrealba3.imageToString()[0]);
 
-        else if (option == 5) System.out.println(image19273899RojasTorrealba.isPixmap());
+            } else if (option == 3) {
 
-        else if (option == 6) System.out.println(image19273899RojasTorrealba.isHexmap());
+                Scanner obj_x1 = new Scanner(System.in);
+                Scanner obj_y1 = new Scanner(System.in);
+                Scanner obj_x2 = new Scanner(System.in);
+                Scanner obj_y2 = new Scanner(System.in);
+                System.out.println("ingrese 4 valores (x1, y1, x2 e y2), correspondientes a los dos puntos más alejados entre sí, dentro de la selección que se desea recortar.\n");
 
-        else if (option == 7) image19273899RojasTorrealba.rotate90();
+                Integer x1 = obj_x1.nextInt();
+                Integer y1 = obj_y1.nextInt();
+                Integer x2 = obj_x2.nextInt();
+                Integer y2 = obj_y2.nextInt();
 
-        else if (option == 8){
+                System.out.println("BITMAP ANTES:\n" + image19273899RojasTorrealba.imageToString()[0]);
+                image19273899RojasTorrealba.crop(x1, y1, x2, y2);
+                System.out.println("BITMAP DESPUES:\n" + image19273899RojasTorrealba.imageToString()[0]);
 
-            System.out.println(image19273899RojasTorrealba2.imageToString()[0]);
-            Image_19273899_RojasTorrealba<Pixhex_19273899_RojasTorrealba> image19273899RojasTorrealba4 = image19273899RojasTorrealba2.imgRGBtoHEX();
-            System.out.println(image19273899RojasTorrealba4.imageToString()[0]);
+                System.out.println("PIXMAP ANTES:\n" + image19273899RojasTorrealba2.imageToString()[0]);
+                image19273899RojasTorrealba2.crop(x1, y1, x2, y2);
+                System.out.println("PIXMAP DESPUES:\n" + image19273899RojasTorrealba2.imageToString()[0]);
 
-        }else if (option == 9){
+                System.out.println("HEXMAP ANTES:\n" + image19273899RojasTorrealba3.imageToString()[0]);
+                image19273899RojasTorrealba3.crop(x1, y1, x2, y2);
+                System.out.println("HEXMAP DESPUES:\n" + image19273899RojasTorrealba3.imageToString()[0]);
+            } else if (option == 4) {
+                System.out.println("BITMAP AL INGRESAR A METODO ISBITMAP(): " + image19273899RojasTorrealba.isBitmap());
+                System.out.println("PIXMAP AL INGRESAR A METODO ISBITMAP(): " + image19273899RojasTorrealba2.isBitmap());
+                System.out.println("HEXMAP AL INGRESAR A METODO ISBITMAP(): " + image19273899RojasTorrealba3.isBitmap());
+            } else if (option == 5) {
+                System.out.println("BITMAP AL INGRESAR A METODO ISPIXMAP(): " + image19273899RojasTorrealba.isPixmap());
+                System.out.println("PIXMAP AL INGRESAR A METODO ISPIXMAP(): " + image19273899RojasTorrealba2.isPixmap());
+                System.out.println("HEXMAP AL INGRESAR A METODO ISPIXMAP(): " + image19273899RojasTorrealba3.isPixmap());
+            } else if (option == 6) {
+                System.out.println("BITMAP AL INGRESAR A METODO ISHEXMAP(): " + image19273899RojasTorrealba.isHexmap());
+                System.out.println("PIXMAP AL INGRESAR A METODO ISHEXMAP(): " + image19273899RojasTorrealba2.isHexmap());
+                System.out.println("HEXMAP AL INGRESAR A METODO ISHEXMAP(): " + image19273899RojasTorrealba3.isHexmap());
+            } else if (option == 7) {
+                System.out.println("BITMAP ANTES:\n" + image19273899RojasTorrealba.imageToString()[0]);
+                image19273899RojasTorrealba.rotate90();
+                System.out.println("BITMAP DESPUES:\n" + image19273899RojasTorrealba.imageToString()[0]);
 
-            Pixhex_19273899_RojasTorrealba pix_in = new Pixhex_19273899_RojasTorrealba(0,0,0,"334455");
-            Image_19273899_RojasTorrealba<Pixhex_19273899_RojasTorrealba> image19273899RojasTorrealba4 = image19273899RojasTorrealba3.changePixel(pix_in);
-            System.out.println(image19273899RojasTorrealba4.imageToString()[0]);
+                System.out.println("PIXMAP ANTES:\n" + image19273899RojasTorrealba2.imageToString()[0]);
+                image19273899RojasTorrealba2.rotate90();
+                System.out.println("PIXMAP DESPUES:\n" + image19273899RojasTorrealba2.imageToString()[0]);
 
-        }else if (option == 10){
+                System.out.println("HEXMAP ANTES:\n" + image19273899RojasTorrealba3.imageToString()[0]);
+                image19273899RojasTorrealba3.rotate90();
+                System.out.println("HEXMAP DESPUES:\n" + image19273899RojasTorrealba3.imageToString()[0]);
+            } else if (option == 8) {
 
-            System.out.println(image19273899RojasTorrealba.imageToString()[0]);
-            image19273899RojasTorrealba.invertColorBit();
-            System.out.println(image19273899RojasTorrealba.imageToString()[0]);
+                System.out.println(image19273899RojasTorrealba2.imageToString()[0]);
+                Image_19273899_RojasTorrealba<Pixhex_19273899_RojasTorrealba> image19273899RojasTorrealba4 = image19273899RojasTorrealba2.imgRGBtoHEX();
+                System.out.println(image19273899RojasTorrealba4.imageToString()[0]);
 
-        }else if (option == 11){
-            System.out.println(image19273899RojasTorrealba2.imageToString()[0]);
-            image19273899RojasTorrealba2.invertColorRGB();
-            System.out.println(image19273899RojasTorrealba2.imageToString()[0]);
+            } else if (option == 9) {
+
+                Pixhex_19273899_RojasTorrealba pix_in = new Pixhex_19273899_RojasTorrealba(0, 0, 0, "334455");
+                Image_19273899_RojasTorrealba<Pixhex_19273899_RojasTorrealba> image19273899RojasTorrealba4 = image19273899RojasTorrealba3.changePixel(pix_in);
+                System.out.println(image19273899RojasTorrealba4.imageToString()[0]);
+
+            } else if (option == 10) {
+
+                System.out.println(image19273899RojasTorrealba.imageToString()[0]);
+                image19273899RojasTorrealba.invertColorBit();
+                System.out.println(image19273899RojasTorrealba.imageToString()[0]);
+
+            } else if (option == 11) {
+                System.out.println(image19273899RojasTorrealba2.imageToString()[0]);
+                image19273899RojasTorrealba2.invertColorRGB();
+                System.out.println(image19273899RojasTorrealba2.imageToString()[0]);
+            }
+
+            System.out.println("¿DESEA REALIZAR OTRA CONSULTA? (Y/N):");
+
+            Scanner exit = new Scanner(System.in);
+            String exitX = exit.next();
+
+            while (!exitX.equals("Y") && !exitX.equals("y") && !exitX.equals("n") && !exitX.equals("N")) {
+                System.out.println("INGRESE UNA OPCION VALIDA (Y/N):");
+
+                exit = new Scanner(System.in);
+                exitX = exit.next();
+            };
+
+            if (exitX.equals("N") || exitX.equals("n")){
+              out = 1;
+            };
         }
+        ;
     }
 }

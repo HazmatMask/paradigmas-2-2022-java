@@ -1,4 +1,15 @@
-import java.lang.reflect.Array;
+/**
+ * NOMBRE DE INTERFACE: IMAGE_INTERFACE
+ * DESCRIPCION: RECOPILA METODOS GENERALES DE MANEJO DE IMAGENES
+ *
+ * METODOS
+ * PUBLICOS:    IMGRGBTOHEX: TRANSFORMA IMAGEN RGB A IMAGEN HEXADECIMAL
+ *              HISTOGRAM (NO IMPLEMENTADO)
+ *              CHANGEPIXEL: MODIFICA UN PIXEL, REEMPLAZANDOLO CON OTRO CON COORDENADAS IDENTICAS
+ *              IMAGETOSTRING: TRANSFORMA EN UN STRING LA INFORMACION ALOJADA EN UNA IMAGEN
+ *
+ * RELACIONES:  DE IMPLEMENTACION CON CLASE IMAGE
+ */
 import java.util.ArrayList;
 
 public interface Image_Interface_19273899_RojasTorrealba {
@@ -10,6 +21,4 @@ public interface Image_Interface_19273899_RojasTorrealba {
     public void changePixel();
 
     public String imageToString();
-
-     // public ? depthLayers();
 }
